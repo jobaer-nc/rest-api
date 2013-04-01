@@ -107,17 +107,17 @@ app.put('/module/:id', function (req, res) {
 });
 
 app.get('/module/:id', function (req, res) {
-  var mysql      = require('mysql');
+  var mysql = require('mysql');
   var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'qweqwe',
+    host: 'localhost',
+    user: 'root',
+    password: 'qweqwe',
     database: 'cms'
   });
 
   connection.connect();
-  var sql = 'SELECT * FROM modules where id='+ connection.escape(req.params.id);
-  connection.query(sql, function(err, rows, fields) {
+  var sql = 'SELECT * FROM modules where id=' + connection.escape(req.params.id);
+  connection.query(sql, function (err, rows, fields) {
     if (err) throw err;
 
     var parser = require('./row-parser');
@@ -131,18 +131,45 @@ app.get('/module/:id', function (req, res) {
 
 });
 
-app.get('/page/:id', function (req, res) {
-  var mysql      = require('mysql');
+app.get('/module/:id/data', function (req, res) {
+  var mysql = require('mysql');
   var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'qweqwe',
+    host: 'localhost',
+    user: 'root',
+    password: 'qweqwe',
     database: 'cms'
   });
 
   connection.connect();
-  var sql = 'SELECT * FROM pages where id='+ connection.escape(req.params.id);
-  connection.query(sql, function(err, rows, fields) {
+  var sql = 'SELECT * FROM modules where id=' + connection.escape(req.params.id);
+  connection.query(sql, function (err, rows, fields) {
+    if (err) throw err;
+
+    var parser = require('./row-parser');
+    var result = parser.moduleParser(rows[0]);
+
+    var client = require('./nc-api');
+    client.getData(result, function (data) {
+      res.setHeader('Content-type', 'application/json');
+      res.send(data);
+    });
+  });
+
+  connection.end();
+});
+
+app.get('/page/:id', function (req, res) {
+  var mysql = require('mysql');
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'qweqwe',
+    database: 'cms'
+  });
+
+  connection.connect();
+  var sql = 'SELECT * FROM pages where id=' + connection.escape(req.params.id);
+  connection.query(sql, function (err, rows, fields) {
     if (err) throw err;
 
     var parser = require('./row-parser');
