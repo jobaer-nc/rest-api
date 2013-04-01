@@ -123,23 +123,12 @@ app.get('/mysql/:id', function (req, res) {
   var sql = 'SELECT * FROM modules where id='+ connection.escape(req.params.id);
   connection.query(sql, function(err, rows, fields) {
     if (err) throw err;
-    var result = {
-      "id": rows[0].id,
-      "title": rows[0].title,
-      "module_type": rows[0].module_type,
-      "block": rows[0].block,
-      "page_id": rows[0].page_id,
-      "order": rows[0].order,
-      "sub_title": rows[0].sub_title
-    };
 
-    console.log('The solution is: ', rows[0].id);
-    for(var prop in rows[0]) {
-      console.log(prop + ':' + rows[0].prop);
-    }
+    var parser = require('./row-parser');
+    var result = parser.moduleParser(rows[0]);
 
     res.setHeader('Content-type', 'application/json');
-    res.send(result);
+    res.send(JSON.stringify(result));
   });
 
   connection.end();
