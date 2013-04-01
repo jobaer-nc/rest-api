@@ -148,8 +148,12 @@ app.get('/module/:id/data', function (req, res) {
     var parser = require('./row-parser');
     var result = parser.moduleParser(rows[0]);
 
-    var client = require('./nc-api');
-    client.getData(result, function (data) {
+    var dataFetcher = require('./nc-api').dataFetcher;
+    console.log(dataFetcher);
+    for(var prop in dataFetcher) {
+      console.log(prop);
+    }
+    dataFetcher.fetch(result, function (data) {
       res.setHeader('Content-type', 'application/json');
       res.send(data);
     });
