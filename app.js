@@ -28,7 +28,7 @@ app.get('/modules', function (req, res) {
 
 });
 
-app.get('/module/:id', function (req, res) {
+app.get('/module-dummy/:id', function (req, res) {
   fs.readFile(data_file, 'utf8', function (err, data) {
     if (err) {
       //todo return 500 error
@@ -110,7 +110,7 @@ app.put('/module/:id', function (req, res) {
   })
 });
 
-app.get('/mysql/:id', function (req, res) {
+app.get('/module/:id', function (req, res) {
   var mysql      = require('mysql');
   var connection = mysql.createConnection({
     host     : 'localhost',
