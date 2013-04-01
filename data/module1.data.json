@@ -1,0 +1,83 @@
+{"num_found": 2, "article_set": [
+    {
+        "category": {
+            "dashed_name": "business",
+            "name": "Business"
+        },
+        "description": "<div xmlns:nc=\"http://www.newscred.com\">Factory output rose at its fastest pace in almost a year in March, but the slower-than-expected increase suggested the economy may not rebound as quickly as many had hoped.</div>",
+        "title": "Chinese manufacturing picks up speed",
+        "topic_set": [],
+        "created_at": "2013-04-01 03:53:12",
+        "source": {
+            "website": "http://www.ft.com",
+            "name": "The Financial Times",
+            "circulation": "5718906",
+            "country": "GB",
+            "company_type": "Public",
+            "founded": "1888",
+            "owner": "Pearson PLC",
+            "media_type": {
+                "dashed_name": "newspaper",
+                "name": "Newspaper"
+            },
+            "guid": "44dd168cc475f5119f592e8d4fd0eb5a",
+            "is_blog": "0",
+            "thumbnail": "http://www.google.com/s2/favicons?domain=www.ft.com",
+            "description": "The Financial Times (FT) is a British international business newspaper. It is a morning daily newspaper\r\npublished in London that has had a strong influence on the financial policies of the British government.\r\nIts main rival as a daily financial newspaper is the New York City-based Wall Street Journal, which also\r\npublishes several international editions. Founded in 1888 by James Sheridan and his brother, the\r\nFinancial Times competed for many years with four other finance-oriented newspapers, finally in 1945\r\nabsorbing the last of these, the Financial News (founded in 1884). The FT has specialized in reporting\r\nbusiness and financial news while maintaining an independent editorial outlook. Circulation of the FT is\r\nsaid to be one of the world's highest among financial newspapers, second only to that of The Wall Street\r\nJournal. Printed as a broadsheet on distinctive light salmon pink paper, the FT is the only paper in the\r\nUK providing full daily reports on the London Stock Exchange and world markets."
+        },
+        "published_at": "2013-04-01 03:38:28",
+        "score": "1.0553639",
+        "link": "http://www.ft.com/cms/s/0/2bec5a3c-9a7d-11e2-83ca-00144feabdc0.html?ftcamp=published_links%2Frss%2Fworld_asia-pacific%2Ffeed%2F%2Fproduct",
+        "guid": "50035517dfb36d4437e4030a923a1606",
+        "metadata": {}
+    },
+    {
+        "category": {
+            "dashed_name": "world",
+            "name": "World"
+        },
+        "description": "<div xmlns:nc=\"http://www.newscred.com\">Sweeping government's changes to the welfare system have started coming into effect, including benefit cuts for some people with spare bedrooms.</div>",
+        "title": "Sweeping changes to welfare begin",
+        "topic_set": [
+            {
+                "name": "Poverty",
+                "topic_group": "Poverty",
+                "description": "Poverty is the lack of basic human needs, such as clean water, nutrition, health care, education, clothing and shelter, because of the inability to afford them. This is also referred to as absolute poverty or destitution. Relative poverty is the condition of having fewer resources or less income than others within a society or country, or compared to worldwide averages. About 1.7 billion people live in absolute poverty; before the industrial revolution, poverty had mostly been the norm.\r\nPoverty reduction has historically been a result of economic growth as increased levels of production, such as modern industrial technology, made more wealth available for those who were otherwise too poor to afford them. Also, investments in modernizing agriculture and increasing yields is considered the core of the antipoverty effort, given three-quarters of the world's poor are rural farmers.\r\nToday, continued economic development is constrained by the lack of economic freedoms. Economic liberalization includes extending property rights, especially to land, to the poor, and making financial services, notably savings, accessible. Inefficient institutions, corruption and political instability can...",
+                "dashed_name": "Poverty",
+                "score": "1.0",
+                "image_url": "http://images.newscred.com/43531076de491c951afbc50426e666bc?width=75&height=75",
+                "link": "http://en.wikipedia.org/wiki/Poverty",
+                "guid": "2b8981543bbc256713dad8e6ddccc609",
+                "topic_classification": "Theme",
+                "metadata": {}
+            }
+        ],
+        "created_at": "2013-04-01 03:12:29",
+        "source": {
+            "website": "http://news.bbc.co.uk",
+            "name": "BBC",
+            "circulation": "9056491",
+            "country": "GB",
+            "company_type": "State-owned Public",
+            "founded": "1922",
+            "owner": "BBC Trust/Government of United Kingdom",
+            "media_type": {
+                "dashed_name": "mainstream",
+                "name": "Mainstream"
+            },
+            "guid": "312ccf6160e04697069c220fc5d32074",
+            "is_blog": "0",
+            "thumbnail": "http://www.google.com/s2/favicons?domain=news.bbc.co.uk",
+            "description": "Founded on 18 October 1922 as the British Broadcasting Company Ltd, it\r\nwas subsequently granted a Royal Charter and made a state-owned corporation\r\nin 1927. The corporation produces programmes and information services,\r\nbroadcasting globally on television, radio, and the Internet. The BBC is a\r\nquasi-autonomous public corporation operating as a public service broadcaster.\r\nThe BBC's domestic programming and broadcasts are primarily funded by levying\r\ntelevision licence fees (under the Wireless Telegraphy Act 1949), although\r\nmoney is also raised through commercial activities such as sale of merchandise\r\nand programming. The stated mission of the BBC is \"to inform, educate and\r\nentertain\"; If the TV and radio services are combined, BBC is probably the\r\nlargest broadcasting system in the world. It also claims to be the largest news\r\ngathering system by means of its regional offices, foreign correspondents and\r\nagreements with other news services. It reaches more than 200 countries and\r\nis available to more than 274 million households."
+        },
+        "published_at": "2013-04-01 03:12:29",
+        "score": "1.0543592",
+        "link": "http://www.bbc.co.uk/news/uk-21991953#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa",
+        "guid": "bb4c57bbf38ec4369f00207e479857b8",
+        "thumbnail": {
+            "original_image": "http://news.bbcimg.co.uk/media/images/66692000/jpg/_66692082_calculator_eyewire.jpg",
+            "link": "http://images.newscred.com/Zz1jMjAyMjk4MDJhYjRlYzRhMTg1MzFhYjRiNjMxYTIzNQ==?width=75&height=75"
+        },
+        "metadata": {}
+    }
+]}
