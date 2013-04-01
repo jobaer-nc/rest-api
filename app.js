@@ -9,10 +9,6 @@ app.get('/pages', function (req, res) {
   res.send('hello world');
 });
 
-app.get('/page/1', function (req, res) {
-  res.send({"url": "/page/1"});
-});
-
 app.get('/modules', function (req, res) {
   fs.readFile(data_file, 'utf8', function (err, data) {
     if (err) {
@@ -121,6 +117,31 @@ app.get('/module/:id', function (req, res) {
 
   connection.connect();
   var sql = 'SELECT * FROM modules where id='+ connection.escape(req.params.id);
+  connection.query(sql, function(err, rows, fields) {
+    if (err) throw err;
+
+    var parser = require('./row-parser');
+    var result = parser.moduleParser(rows[0]);
+
+    res.setHeader('Content-type', 'application/json');
+    res.send(JSON.stringify(result));
+  });
+
+  connection.end();
+
+});
+
+app.get('/page/:id', function (req, res) {
+  var mysql      = require('mysql');
+  var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'qweqwe',
+    database: 'cms'
+  });
+
+  connection.connect();
+  var sql = 'SELECT * FROM pages where id='+ connection.escape(req.params.id);
   connection.query(sql, function(err, rows, fields) {
     if (err) throw err;
 
