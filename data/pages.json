@@ -1,0 +1,30 @@
+{
+	"modules": [
+			{
+				"id":	1,
+				"page_id": 1, 
+				"module_type": "article-list", 
+				"block":	"first-column", 
+				"title":	"Latest news",
+				"page_size":	5,
+				"order":	1
+			}, 
+			{
+				"id":	2,
+				"page_id": 1, 
+				"module_type": "article-list", 
+				"block":	"first-column", 
+				"title":	"Latest news",
+				"page_size":	10,
+				"order":	2
+			}, 
+			{
+				"id":	3,
+				"page_id": 2, 
+				"module_type": "editors-picks", 
+				"block":	"first-column", 
+				"title":	"Featured articles",
+				"page_size":	5
+			}
+	]
+}

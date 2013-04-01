@@ -1,0 +1,10 @@
+{
+  "name": "CMS-API",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "jasmine-node": "*",
+    "request": "*",
+    "cheerio": "~0.10.8"
+  }
+}
