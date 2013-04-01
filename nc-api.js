@@ -1,5 +1,6 @@
 var articleListFetcher = require('./article-list-fetcher').articleListFetcher;
 var editorPicksFetcher = require('./editors-picks-fetcher').editorsPicksFetcher;
+var articleFetcher = require('./article-fetcher').articleFetcher;
 
 function DataFetcher() {
 
@@ -12,7 +13,8 @@ DataFetcher.prototype.fetch = function (m, success) {
 
 DataFetcher.prototype.fetchers = {
   "article-list": articleListFetcher,
-  "editors-picks": editorPicksFetcher
+  "editors-picks": editorPicksFetcher,
+  "article": articleFetcher
 };
 
 module.exports.dataFetcher = new DataFetcher();

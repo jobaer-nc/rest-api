@@ -39,3 +39,6 @@ var articleListFetcher = {
 };
 
 module.exports.articleListFetcher = articleListFetcher;
+
+var dataFetcher = require('./DataFetcher');
+dataFetche
