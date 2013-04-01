@@ -10,7 +10,7 @@ app.get('/pages', function (req, res) {
 });
 
 app.get('/page/1', function (req, res) {
-  res.send({"url":"/page/1"});
+  res.send({"url": "/page/1"});
 });
 
 app.get('/modules', function (req, res) {
@@ -91,7 +91,7 @@ app.put('/module/:id', function (req, res) {
     data = JSON.parse(data);
 
     var module = req.body;
-    for(var i=0; i<data.modules.length; i++) {
+    for (var i = 0; i < data.modules.length; i++) {
       if (data.modules[i].id == req.params.id) {
         data.modules[i] = module;
       }
@@ -110,10 +110,46 @@ app.put('/module/:id', function (req, res) {
   })
 });
 
+app.get('/mysql/:id', function (req, res) {
+  var mysql      = require('mysql');
+  var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'qweqwe',
+    database: 'cms'
+  });
+
+  connection.connect();
+  var sql = 'SELECT * FROM modules where id='+ connection.escape(req.params.id);
+  connection.query(sql, function(err, rows, fields) {
+    if (err) throw err;
+    var result = {
+      "id": rows[0].id,
+      "title": rows[0].title,
+      "module_type": rows[0].module_type,
+      "block": rows[0].block,
+      "page_id": rows[0].page_id,
+      "order": rows[0].order,
+      "sub_title": rows[0].sub_title
+    };
+
+    console.log('The solution is: ', rows[0].id);
+    for(var prop in rows[0]) {
+      console.log(prop + ':' + rows[0].prop);
+    }
+
+    res.setHeader('Content-type', 'application/json');
+    res.send(result);
+  });
+
+  connection.end();
+
+});
+
 app.get('/*', function (req, res) {
   res.send({
-    "status":404,
-    "message":"404 Not found"
+    "status": 404,
+    "message": "404 Not found"
   })
 });
 
